@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Tennis Moneyline Tracker placeholder">
+  <rect width="800" height="600" fill="#B88455"/>
+  <path d="M0 470 C220 380 360 520 600 430 S760 330 800 360 L800 600 L0 600 Z" fill="#FFFFFF" opacity="0.1"/>
+  <path d="M0 505 C250 420 420 560 680 465 S790 400 800 420 L800 600 L0 600 Z" fill="#081A2D" opacity="0.12"/>
+  <text x="48" y="150" fill="#FFFFFF" font-family="Sora, Arial, sans-serif" font-size="200" font-weight="700" opacity="0.18">03</text>
+  <rect x="612" y="44" width="144" height="44" rx="22" fill="#FFFFFF" opacity="0.2"/>
+  <text x="684" y="72" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600" text-anchor="middle" letter-spacing="2">ATP + WTA</text>
+  <g>
+    <rect x="48" y="380" width="86" height="140" rx="8" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="154" y="320" width="86" height="200" rx="8" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="260" y="356" width="86" height="164" rx="8" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="366" y="264" width="86" height="256" rx="8" fill="#081A2D"/>
+    <rect x="472" y="310" width="86" height="210" rx="8" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="578" y="228" width="86" height="292" rx="8" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+  <path d="M48 470 C220 380 360 520 600 430 S760 330 800 360" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.4"/>
+  <text x="720" y="560" fill="#FFFFFF" font-family="Sora, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3" text-anchor="end" opacity="0.55">TWO HOUNDS RUN</text>
+</svg>
