@@ -84,7 +84,13 @@ export default function Home() {
         </div>
 
         <div className="hero-card" aria-label="What Two Hounds Run builds">
-          <img className="hero-art" src="/images/website-header.png" alt="" />
+          <img
+            className="hero-art"
+            src="/images/mark.png"
+            alt=""
+            width={1024}
+            height={1024}
+          />
           <div className="hero-card-copy">
             <p>Practical tools. Built for the long run.</p>
             <span>Websites · Data · Sports · Automation</span>
@@ -159,7 +165,13 @@ export default function Home() {
 
       <section className="section about" id="about">
         <div className="about-mark" aria-hidden="true">
-          <img className="about-logo" src="/images/mark.png" alt="" />
+          <img
+            className="about-logo"
+            src="/images/mark.png"
+            alt=""
+            width={1024}
+            height={1024}
+          />
           <span>Good ideas<br />have a nose<br />for the trail.</span>
         </div>
         <div className="about-copy">
