@@ -1,0 +1,47 @@
+/* Image placement overrides.
+   Web-facing brand assets live in public/images and are referenced from /images/*. */
+
+.hero-card {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-content: stretch;
+}
+
+.hero-art {
+  position: relative;
+  inset: auto;
+  align-self: center;
+  justify-self: center;
+  width: min(86%, 430px);
+  height: auto;
+  max-height: 390px;
+  padding: 24px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.hero-card-copy {
+  width: 100%;
+}
+
+.about-logo {
+  margin-inline: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .hero-art {
+    width: min(78%, 380px);
+    max-height: 300px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-art {
+    width: min(76%, 300px);
+    max-height: 240px;
+    padding: 14px;
+  }
+}
