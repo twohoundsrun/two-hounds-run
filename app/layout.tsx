@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
 import "./globals.css";
+import "./image-placement.css";
 
 const sans = Inter({ variable: "--font-sans", subsets: ["latin"] });
 const display = Sora({ variable: "--font-display", subsets: ["latin"] });
