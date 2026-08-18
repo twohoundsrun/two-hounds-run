@@ -1,5 +1,5 @@
 {
-  "name": "two-blue-hounds",
+  "name": "two-hounds-run",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -40,5 +40,5 @@
     "wrangler": "4.92.0"
   },
   "type": "module",
-  "displayName": "Two Blue Hounds"
+  "displayName": "Two Hounds Run"
 }
