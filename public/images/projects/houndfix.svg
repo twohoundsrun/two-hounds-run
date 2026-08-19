@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="HoundFix PC Toolkit">
+  <rect width="800" height="600" fill="#081A2D"/>
+  <path d="M0 462C176 408 332 520 544 447c105-36 177-91 256-72v225H0Z" fill="#2F80ED" opacity=".14"/>
+  <path d="M0 510c205-70 363 55 603-28 77-27 138-51 197-39v157H0Z" fill="#9ED7F5" opacity=".1"/>
+  <text x="48" y="148" fill="#FFFFFF" font-family="Sora,Arial,sans-serif" font-size="190" font-weight="700" opacity=".1">HF</text>
+  <rect x="588" y="44" width="168" height="44" rx="22" fill="#2F80ED"/>
+  <text x="672" y="72" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="2">WINDOWS 10/11</text>
+  <g transform="translate(248 176)">
+    <path d="M142 0c15 0 28 11 30 26l5 39c10 4 20 9 29 16l36-15c14-6 30 0 38 13l21 37c8 13 5 30-7 39l-31 24c1 6 2 13 2 20s-1 14-2 20l31 24c12 9 15 26 7 39l-21 37c-8 13-24 19-38 13l-36-15c-9 7-19 12-29 16l-5 39c-2 15-15 26-30 26h-43c-15 0-28-11-30-26l-5-39c-10-4-20-9-29-16l-36 15c-14 6-30 0-38-13l-21-37c-8-13-5-30 7-39l31-24c-1-6-2-13-2-20s1-14 2-20l-31-24c-12-9-15-26-7-39l21-37c8-13 24-19 38-13l36 15c9-7 19-12 29-16l5-39c2-15 15-26 30-26Z" fill="#2F80ED" opacity=".92"/>
+    <circle cx="120" cy="199" r="70" fill="#081A2D"/>
+    <path d="M83 203l25 25 52-61" fill="none" stroke="#9ED7F5" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="48" y="548" fill="#FFFFFF" font-family="Sora,Arial,sans-serif" font-size="30" font-weight="700">HOUNDFIX</text>
+  <text x="48" y="574" fill="#9ED7F5" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="3">PC TOOLKIT · TWO HOUNDS RUN</text>
+</svg>
