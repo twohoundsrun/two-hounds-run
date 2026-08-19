@@ -13,6 +13,17 @@ mkdir -p \
 
 export SITES_ENV_READY=1
 export SITES_PROJECT_ROOT="${project_root}"
+
+# Cloudflare's Node/npm shims are installed under the original build HOME
+# (for example /opt/buildhome/.asdf). Preserve those toolchain paths before
+# switching HOME to the project's writable runtime directory. Otherwise the
+# npm shim resolves ~/.asdf against .sites-runtime/home and fails before npm
+# can run.
+original_home="${HOME:-}"
+if [[ -n "${original_home}" && -d "${original_home}/.asdf" ]]; then
+  export ASDF_DATA_DIR="${ASDF_DATA_DIR:-${original_home}/.asdf}"
+fi
+
 export HOME="${runtime_root}/home"
 export XDG_CONFIG_HOME="${runtime_root}/xdg-config"
 export TMPDIR="${runtime_root}/tmp"
