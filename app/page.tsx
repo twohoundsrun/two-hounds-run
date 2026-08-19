@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const services = [
   {
     number: "01",
@@ -51,6 +53,15 @@ const shippedProjects = [
     caseStudyUrl: null,
     liveUrl: "https://github.com/CollinKrum/espn-fantasy-history-toolkit",
   },
+  {
+    label: "Windows utility",
+    title: "HoundFix PC Toolkit",
+    copy: "A portable desktop utility that handles common Windows repairs, system diagnostics, cleanup, and recovery tasks from one straightforward interface.",
+    visual: "houndfix.svg",
+    proof: "Windows 10/11 · 14 repair & diagnostic tools · v1.1",
+    caseStudyUrl: "/products/houndfix",
+    liveUrl: null,
+  },
 ];
 
 const labProjects = [
@@ -85,8 +96,8 @@ export default function Home() {
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow"><span /> Independent digital studio · Northeast PA</p>
-          <h1 id="hero-title">Practical technology<em>built for the real world.</em></h1>
-          <p className="hero-intro">Useful websites, sports-data projects, and custom tools—built to solve an actual problem without making things more complicated.</p>
+          <h1 id="hero-title">Practical technology{" "}<em>built for the real world.</em></h1>
+          <p className="hero-intro">Websites, automation, and custom data tools for small businesses and organizations that have outgrown spreadsheets, generic software, or an outdated web presence.</p>
           <div className="hero-actions">
             <a className="button" href="#work">See the work <span aria-hidden="true">↓</span></a>
             <a className="text-link" href="#services">Explore services <span aria-hidden="true">→</span></a>
@@ -99,7 +110,18 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Project scale">
-        {proof.map((item) => <div key={item.label}><strong>{item.value}</strong><span>{item.label}</span></div>)}
+        {proof.map((item) => <div key={item.label}><strong>{item.value}</strong>{" "}<span>{item.label}</span></div>)}
+      </section>
+
+      <section className="section audience-paths" aria-labelledby="audience-title">
+        <div className="audience-heading">
+          <div><p className="kicker">Choose your path</p><h2 id="audience-title">Different problems. The same practical approach.</h2></div>
+          <p>Start with the kind of work you need. Every project is scoped around the useful outcome—not a bloated list of features.</p>
+        </div>
+        <div className="audience-grid">
+          <article className="audience-card audience-business"><span>For businesses</span><h3>Build a stronger web presence or a smoother operation.</h3><p>For contractors, local services, organizations, and teams that need a credible website or less repetitive work.</p><div><Link href="/websites">Business websites <b aria-hidden="true">→</b></Link><Link href="/automation">Workflow automation <b aria-hidden="true">→</b></Link></div></article>
+          <article className="audience-card audience-data"><span>Sports & data projects</span><h3>Turn complicated information into something people can use.</h3><p>For leagues, sports projects, and organizations that need custom dashboards, historical archives, or structured data.</p><div><Link href="/data-tools">Data tools & dashboards <b aria-hidden="true">→</b></Link><a href="#work">See shipped work <b aria-hidden="true">↓</b></a></div></article>
+        </div>
       </section>
 
       <section className="section services" id="services">
@@ -129,10 +151,10 @@ export default function Home() {
             <article className="project-card" key={project.title}>
               <div className="project-visual" aria-hidden="true"><img src={`/images/projects/${project.visual}`} alt="" /></div>
               <div className="project-copy">
-                <p>{project.label}</p><h3>{project.title}</h3><span>{project.copy}</span><strong className="project-proof">{project.proof}</strong>
+                <p>{project.label}</p><h3>{project.title}</h3><span>{project.copy}</span>{" "}<strong className="project-proof">{project.proof}</strong>
                 <div className="project-actions">
-                  {project.caseStudyUrl && <a className="project-link" href={project.caseStudyUrl}>Read case study <span aria-hidden="true">→</span></a>}
-                  <a className="project-link project-link-secondary" href={project.liveUrl} target="_blank" rel="noopener noreferrer">{project.caseStudyUrl ? "View live" : "View on GitHub"} <span aria-hidden="true">↗</span></a>
+                  {project.caseStudyUrl && <Link className="project-link" href={project.caseStudyUrl}>{project.title === "HoundFix PC Toolkit" ? "View product" : "Read case study"} <span aria-hidden="true">→</span></Link>}
+                  {project.liveUrl && <a className="project-link project-link-secondary" href={project.liveUrl} target="_blank" rel="noopener noreferrer">{project.caseStudyUrl ? "View live" : "View on GitHub"} <span aria-hidden="true">↗</span></a>}
                 </div>
               </div>
             </article>
@@ -160,8 +182,8 @@ export default function Home() {
       </section>
 
       <section className="contact" id="contact">
-        <p className="kicker">Start a conversation</p><h2>Have an idea—or just a problem that needs solving?</h2><p>Tell us what is taking too much time, what feels disorganized, or what you want to build.</p>
-        <a className="button button-light" href="mailto:collindk94@gmail.com?subject=Two%20Hounds%20Run%20project">Tell us about it <span aria-hidden="true">↗</span></a>
+        <p className="kicker">Start a conversation</p><h2>Have an idea—or just a problem that needs solving?</h2><p>No technical brief required. Tell me what is not working and we will figure out the right-sized solution.</p>
+        <a className="button button-light" href="mailto:collindk94@gmail.com?subject=Two%20Hounds%20Run%20project">Tell me about your project <span aria-hidden="true">↗</span></a>
         <div className="contact-rings" aria-hidden="true"><i /><i /><i /></div>
       </section>
 
