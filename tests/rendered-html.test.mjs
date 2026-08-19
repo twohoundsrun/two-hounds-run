@@ -31,3 +31,32 @@ test("renders development preview metadata", async () => {
   );
   assert.match(await response.text(), developmentPreviewMeta);
 });
+
+test("renders portfolio proof and the 1048 Gate case study", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("portfolio-test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
+  const ctx = { waitUntil() {}, passThroughOnException() {} };
+
+  const homepage = await worker.fetch(
+    new Request("http://localhost/", { headers: { accept: "text/html" } }),
+    env,
+    ctx,
+  );
+  const homepageHtml = await homepage.text();
+  assert.equal(homepage.status, 200);
+  assert.match(homepageHtml, /Built &amp; shipped/i);
+  assert.match(homepageHtml, /109,875/);
+  assert.match(homepageHtml, /\/work\/1048-gate/);
+
+  const caseStudy = await worker.fetch(
+    new Request("http://localhost/work/1048-gate", { headers: { accept: "text/html" } }),
+    env,
+    ctx,
+  );
+  const caseStudyHtml = await caseStudy.text();
+  assert.equal(caseStudy.status, 200);
+  assert.match(caseStudyHtml, /The league now owns its story/i);
+  assert.match(caseStudyHtml, /4,785/);
+});
