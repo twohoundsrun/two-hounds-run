@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const developmentPreviewMeta =
@@ -90,4 +91,14 @@ test("renders portfolio proof and the 1048 Gate case study", async () => {
     assert.equal(response.status, 200);
     assert.match(await response.text(), new RegExp(expected, "i"));
   }
+});
+
+test("keeps the mobile homepage intentionally compact", async () => {
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.hero-card\s*\{\s*display:\s*none;/);
+  assert.match(css, /\.proof-strip\s*\{[^}]*grid-template-columns:\s*repeat\(2,/);
+  assert.match(css, /\.services\s*\{\s*display:\s*none;/);
+  assert.match(css, /\.project-grid\s*\{[^}]*overflow-x:\s*auto;/);
+  assert.match(css, /\.lab-card p, \.lab-card em\s*\{\s*display:\s*none;/);
 });
