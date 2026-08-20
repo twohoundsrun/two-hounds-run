@@ -113,7 +113,7 @@ export default function Home() {
         {proof.map((item) => <div key={item.label}><strong>{item.value}</strong>{" "}<span>{item.label}</span></div>)}
       </section>
 
-      <section className="section audience-paths" aria-labelledby="audience-title">
+      <section className="section audience-paths" id="services" aria-labelledby="audience-title">
         <div className="audience-heading">
           <div><p className="kicker">Choose your path</p><h2 id="audience-title">Different problems. The same practical approach.</h2></div>
           <p>Start with the kind of work you need. Every project is scoped around the useful outcome—not a bloated list of features.</p>
@@ -122,9 +122,10 @@ export default function Home() {
           <article className="audience-card audience-business"><span>For businesses</span><h3>Build a stronger web presence or a smoother operation.</h3><p>For contractors, local services, organizations, and teams that need a credible website or less repetitive work.</p><div><Link href="/websites">Business websites <b aria-hidden="true">→</b></Link><Link href="/automation">Workflow automation <b aria-hidden="true">→</b></Link></div></article>
           <article className="audience-card audience-data"><span>Sports & data projects</span><h3>Turn complicated information into something people can use.</h3><p>For leagues, sports projects, and organizations that need custom dashboards, historical archives, or structured data.</p><div><Link href="/data-tools">Data tools & dashboards <b aria-hidden="true">→</b></Link><a href="#work">See shipped work <b aria-hidden="true">↓</b></a></div></article>
         </div>
+        <p className="mobile-scroll-hint" aria-hidden="true">Swipe to compare <span>→</span></p>
       </section>
 
-      <section className="section services" id="services">
+      <section className="section services" id="service-details">
         <div className="section-heading">
           <p className="kicker">What you can hire us for</p>
           <h2>Good technology should make something easier.</h2>
@@ -146,6 +147,7 @@ export default function Home() {
           <div><p className="kicker">Built & shipped</p><h2>Real projects, already at work.</h2></div>
           <p>Finished work with live users, real data, and a clear job to do—not concept pieces or generic demos.</p>
         </div>
+        <p className="mobile-scroll-hint" aria-hidden="true">Swipe through projects <span>→</span></p>
         <div className="project-grid">
           {shippedProjects.map((project) => (
             <article className="project-card" key={project.title}>
