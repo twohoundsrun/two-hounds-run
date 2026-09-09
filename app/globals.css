@@ -13,6 +13,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+html, body { overflow-x: clip; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans), sans-serif; }
 a { color: inherit; text-decoration: none; }
 
@@ -344,15 +345,15 @@ footer > div { display: flex; gap: 20px; font-size: 11px; }
   .mobile-menu:not([hidden]) { top: 72px; }
   .brand-mark { width: 36px; height: 36px; }
   .brand-lockup { width: 148px; }
-  .hero { min-height: 100svh; display: flex; align-items: center; padding: 96px 20px 42px; }
-  .hero-copy { width: 100%; }
+  .hero { min-height: auto; display: flex; flex-direction: column; align-items: stretch; overflow: hidden; width: 100%; padding: 96px 20px 28px; }
+  .hero-copy { width: 100%; max-width: 100%; }
   .hero .eyebrow { max-width: 290px; margin-bottom: 18px; font-size: 9px; line-height: 1.55; letter-spacing: .14em; }
   .hero h1 { font-size: clamp(42px, 12vw, 48px); line-height: .97; }
   .hero-intro { margin-top: 24px; font-size: 15px; line-height: 1.58; }
   .hero-actions { align-items: center; flex-direction: row; flex-wrap: wrap; gap: 12px 18px; margin-top: 27px; }
   .hero-actions .button { padding: 14px 16px; gap: 20px; }
   .hero-actions .text-link { font-size: 12px; }
-  .hero-card { display: none; }
+  .hero-card { display: grid; width: 100%; min-height: 280px; margin-top: 28px; }
   .proof-strip { min-height: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 20px; }
   .proof-strip div, .proof-strip div:first-child, .proof-strip div:nth-child(odd) { min-height: 112px; padding: 17px 10px; border: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
   .proof-strip div:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.22); }

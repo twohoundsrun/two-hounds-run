@@ -70,7 +70,8 @@ test("renders portfolio proof and the 1048 Gate case study", async () => {
 test("keeps the mobile homepage intentionally compact", async () => {
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
-  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.hero-card\s*\{\s*display:\s*none;/);
+  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.hero\s*\{[^}]*flex-direction:\s*column;/);
+  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.hero-card\s*\{[^}]*width:\s*100%;/);
   assert.match(css, /\.proof-strip\s*\{[^}]*grid-template-columns:\s*repeat\(2,/);
   assert.match(css, /\.services\s*\{\s*display:\s*none;/);
   assert.match(css, /\.project-grid\s*\{[^}]*overflow-x:\s*auto;/);
