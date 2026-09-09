@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteHeader from "./components/site-header";
 
 const services = [
   {
@@ -80,17 +81,7 @@ const labProjects = [
 export default function Home() {
   return (
     <main id="top">
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Two Hounds Run home">
-          <img className="brand-mark" src="/images/two-hounds-mark.png" alt="Two Hounds Run" width={512} height={512} />
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-        </nav>
-        <a className="button button-small" href="#contact">Start a project <span aria-hidden="true">↗</span></a>
-      </header>
+      <SiteHeader />
 
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-grid" aria-hidden="true" />

@@ -35,7 +35,7 @@ export default function HoundFixProduct() {
 
       <section className="product-hero">
         <div className="product-hero-copy">
-          <p className="eyebrow"><span /> Two Hounds Run product · Windows v1.1</p>
+          <p className="eyebrow"><span /><span className="eyebrow-copy">Two Hounds Run product<span className="eyebrow-joiner"> · </span><span className="eyebrow-keep">Windows · v1.1</span></span></p>
           <h1>Meet <em>HoundFix.</em></h1>
           <p>Common PC problems, one straightforward toolkit. HoundFix brings Windows repairs, cleanup, diagnostics, and recovery tools together in a portable desktop app.</p>
           <div className="product-actions">

@@ -30,9 +30,11 @@ a { color: inherit; text-decoration: none; }
   width: 188px; height: auto; display: block;
   background: #f7f9fc; border-radius: 10px; padding: 6px 8px;
 }
-.site-header nav { display: flex; align-items: center; gap: 32px; font-size: 13px; }
-.site-header nav a { opacity: .78; transition: opacity .2s; }
-.site-header nav a:hover { opacity: 1; }
+.site-header > .site-nav { display: flex; align-items: center; gap: 32px; font-size: 13px; }
+.site-header > .site-nav a { opacity: .78; transition: opacity .2s; }
+.site-header > .site-nav a:hover { opacity: 1; }
+.menu-toggle { display: none; }
+.mobile-menu { display: none; }
 
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 28px; width: fit-content; padding: 16px 20px; background: var(--blue); color: white; font-size: 13px; font-weight: 600; letter-spacing: .02em; border: 0; transition: transform .2s, background .2s; }
 .button:hover { transform: translateY(-2px); background: #4791f5; }
@@ -43,7 +45,9 @@ a { color: inherit; text-decoration: none; }
 .hero-copy, .hero-card { position: relative; z-index: 1; }
 .eyebrow, .kicker { display: flex; align-items: center; gap: 10px; margin: 0 0 24px; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
 .eyebrow { color: #a9c3d4; }
-.eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: var(--copper); box-shadow: 0 0 0 6px rgba(197,110,66,.13); }
+.eyebrow > span:first-child { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: var(--copper); box-shadow: 0 0 0 6px rgba(197,110,66,.13); }
+.eyebrow-copy { min-width: 0; }
+.eyebrow-keep { white-space: nowrap; }
 .hero h1 { max-width: 760px; margin: 0; font-family: var(--font-display), serif; font-size: clamp(56px, 6.5vw, 94px); line-height: .96; font-weight: 600; letter-spacing: -.055em; }
 .hero h1 em { display: block; color: var(--blue-light); font-weight: 350; }
 .hero-intro { max-width: 625px; margin: 34px 0 0; color: #b8c9d6; font-size: 18px; line-height: 1.75; }
@@ -275,7 +279,35 @@ footer > div { display: flex; gap: 20px; font-size: 11px; }
 
 @media (max-width: 900px) {
   .site-header { width: calc(100% - 40px); height: 86px; }
-  .site-header nav { display: none; }
+  .site-header > .site-nav, .site-header .header-contact { display: none; }
+  .menu-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; padding: 0; border: 0; background: transparent; color: var(--cream); cursor: pointer;
+  }
+  .menu-toggle-bars, .menu-toggle-bars:before, .menu-toggle-bars:after {
+    display: block; width: 20px; height: 2px; background: currentColor; position: relative;
+  }
+  .menu-toggle-bars:before, .menu-toggle-bars:after { content: ""; position: absolute; left: 0; }
+  .menu-toggle-bars:before { top: -6px; }
+  .menu-toggle-bars:after { top: 6px; }
+  .menu-toggle[aria-expanded="true"] .menu-toggle-bars { background: transparent; }
+  .menu-toggle[aria-expanded="true"] .menu-toggle-bars:before { top: 0; transform: rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] .menu-toggle-bars:after { top: 0; transform: rotate(-45deg); }
+  .menu-toggle:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; }
+  .site-header.is-menu-open { z-index: 30; }
+  .mobile-menu:not([hidden]) {
+    display: block; position: fixed; z-index: 20; top: 86px; left: 0; right: 0; width: auto; transform: none;
+    padding: 8px 20px 20px; background: var(--deep); border-top: 1px solid rgba(245,240,230,.18);
+    box-shadow: 0 24px 40px rgba(5,14,25,.35);
+  }
+  .mobile-menu nav { display: flex; flex-direction: column; }
+  .mobile-menu a {
+    display: flex; align-items: center; min-height: 48px; padding: 0 8px;
+    color: var(--cream); font-size: 16px; font-weight: 600; letter-spacing: .02em; opacity: 1;
+  }
+  .mobile-menu-contact {
+    justify-content: center; margin-top: 8px; background: var(--blue); color: white;
+  }
   .brand-mark { width: 42px; height: 42px; }
   .brand-lockup { width: 164px; }
   .hero { min-height: auto; grid-template-columns: 1fr; padding: 140px 24px 72px; gap: 55px; }
@@ -309,8 +341,7 @@ footer > div { display: flex; gap: 20px; font-size: 11px; }
 
 @media (max-width: 560px) {
   .site-header { width: calc(100% - 32px); height: 72px; }
-  .site-header .button-small { padding: 10px; gap: 0; font-size: 0; }
-  .site-header .button-small span { font-size: 15px; }
+  .mobile-menu:not([hidden]) { top: 72px; }
   .brand-mark { width: 36px; height: 36px; }
   .brand-lockup { width: 148px; }
   .hero { min-height: 100svh; display: flex; align-items: center; padding: 96px 20px 42px; }
@@ -335,9 +366,9 @@ footer > div { display: flex; gap: 20px; font-size: 11px; }
   .audience-heading { margin-bottom: 28px; }
   .audience-heading h2 { font-size: 34px; line-height: 1.05; }
   .audience-heading > p { display: none; }
-  .audience-grid, .project-grid { display: flex; gap: 12px; overflow-x: auto; margin-right: -20px; padding: 0 20px 8px 0; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-inline: contain; }
+  .audience-grid, .project-grid { display: flex; gap: 16px; overflow-x: auto; margin-right: 0; padding: 0 0 8px; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-inline: contain; }
   .audience-grid::-webkit-scrollbar, .project-grid::-webkit-scrollbar { display: none; }
-  .audience-card { flex: 0 0 86%; min-height: 270px; padding: 24px; scroll-snap-align: start; }
+  .audience-card { flex: 0 0 100%; max-width: 100%; min-height: 270px; padding: 24px; scroll-snap-align: start; }
   .audience-card:after { width: 260px; height: 160px; right: -90px; bottom: -90px; }
   .audience-card h3 { margin: 28px 0 12px; font-size: 23px; }
   .audience-card p { font-size: 13px; line-height: 1.55; }
@@ -350,7 +381,11 @@ footer > div { display: flex; gap: 20px; font-size: 11px; }
   .work-heading h2 { font-size: 36px; }
   .work-heading > p { display: none; }
   .work > .mobile-scroll-hint { margin-bottom: 11px; }
-  .project-card { flex: 0 0 86%; scroll-snap-align: start; }
+  .project-card { flex: 0 0 100%; max-width: 100%; scroll-snap-align: start; }
+  .product-hero .eyebrow { align-items: flex-start; }
+  .product-hero .eyebrow > span:first-child { margin-top: 5px; }
+  .product-hero .eyebrow-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; line-height: 1.45; }
+  .product-hero .eyebrow-joiner { display: none; }
   .project-visual { height: 158px; }
   .project-copy { min-height: 0; padding: 22px; }
   .project-copy > p { margin-bottom: 10px; font-size: 8px; }
