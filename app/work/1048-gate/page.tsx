@@ -17,7 +17,7 @@ export default function GateCaseStudy() {
   return (
     <main className="case-study">
       <header className="case-header">
-        <Link className="brand" href="/" aria-label="Two Hounds Run home"><img className="brand-logo" src="/images/logo-white.png" alt="Two Hounds Run" width={1774} height={887} /></Link>
+        <Link className="brand" href="/" aria-label="Two Hounds Run home"><img className="brand-mark" src="/images/two-hounds-mark.png" alt="Two Hounds Run" width={512} height={512} /></Link>
         <Link className="case-back" href="/#work">← Back to work</Link>
       </header>
 
@@ -45,7 +45,7 @@ export default function GateCaseStudy() {
 
       <section className="case-result"><p className="kicker">The result</p><h2>The league now owns its story.</h2><p>1048 Gate has a live, dedicated home that turns years of scattered fantasy data into something members can revisit, compare, and keep building on every season.</p><a className="button button-light" href="https://1048gate.github.io/" target="_blank" rel="noopener noreferrer">Explore 1048 Gate <span aria-hidden="true">↗</span></a></section>
 
-      <footer><Link className="brand brand-footer" href="/"><img className="brand-logo" src="/images/logo-white.png" alt="Two Hounds Run" width={1774} height={887} /></Link><p>Practical tools. Built for the long run.</p><div><Link href="/#services">Services</Link><Link href="/#work">Work</Link><Link href="/#contact">Contact</Link></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
+      <footer><Link className="brand brand-footer" href="/"><img className="brand-lockup" src="/images/two-hounds-lockup.png" alt="Two Hounds Run" width={1774} height={887} /></Link><p>Practical tools. Built for the long run.</p><div><Link href="/#services">Services</Link><Link href="/#work">Work</Link><Link href="/#contact">Contact</Link></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
     </main>
   );
 }

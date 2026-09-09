@@ -16,7 +16,7 @@ export default function ServicePage({ eyebrow, title, intro, audience, problems,
   return (
     <main className="service-page">
       <header className="case-header">
-        <Link className="brand" href="/" aria-label="Two Hounds Run home"><img className="brand-logo" src="/images/logo-white.png" alt="Two Hounds Run" width={1774} height={887} /></Link>
+        <Link className="brand" href="/" aria-label="Two Hounds Run home"><img className="brand-mark" src="/images/two-hounds-mark.png" alt="Two Hounds Run" width={512} height={512} /></Link>
         <Link className="case-back" href="/#services">← All services</Link>
       </header>
 
@@ -57,7 +57,7 @@ export default function ServicePage({ eyebrow, title, intro, audience, problems,
         <p className="kicker">Start a conversation</p><h2>Tell me what is not working.</h2><p>No technical plan required. We will figure out whether there is a practical, right-sized way to solve it.</p><a className="button button-light" href={`mailto:collindk94@gmail.com?subject=${encodeURIComponent(subject)}`}>Tell me about your project <span aria-hidden="true">↗</span></a>
       </section>
 
-      <footer><Link className="brand brand-footer" href="/"><img className="brand-logo" src="/images/logo-white.png" alt="Two Hounds Run" width={1774} height={887} /></Link><p>Practical tools. Built for the long run.</p><div><Link href="/#services">Services</Link><Link href="/#work">Work</Link><Link href="/#contact">Contact</Link></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
+      <footer><Link className="brand brand-footer" href="/"><img className="brand-lockup" src="/images/two-hounds-lockup.png" alt="Two Hounds Run" width={1774} height={887} /></Link><p>Practical tools. Built for the long run.</p><div><Link href="/#services">Services</Link><Link href="/#work">Work</Link><Link href="/#contact">Contact</Link></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
     </main>
   );
 }

@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "two-blue-hounds",
+  "account_id": "9f99f068882ff62fff142655f4c9f0cc",
+  "main": "./dist/server/index.js",
+  "compatibility_date": "2026-03-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "twohoundsrun.com",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS"
+  }
+}

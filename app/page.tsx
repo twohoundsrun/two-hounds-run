@@ -82,7 +82,7 @@ export default function Home() {
     <main id="top">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Two Hounds Run home">
-          <img className="brand-logo" src="/images/logo-white.png" alt="Two Hounds Run" width={1774} height={887} />
+          <img className="brand-mark" src="/images/two-hounds-mark.png" alt="Two Hounds Run" width={512} height={512} />
         </a>
         <nav aria-label="Main navigation">
           <a href="#services">Services</a>
@@ -189,7 +189,7 @@ export default function Home() {
         <div className="contact-rings" aria-hidden="true"><i /><i /><i /></div>
       </section>
 
-      <footer><a className="brand brand-footer" href="#top"><img className="brand-logo" src="/images/logo-white.png" alt="Two Hounds Run" width={1774} height={887} /></a><p>Websites, sports data, and useful digital tools.</p><div><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
+      <footer><a className="brand brand-footer" href="#top"><img className="brand-lockup" src="/images/two-hounds-lockup.png" alt="Two Hounds Run" width={1774} height={887} /></a><p>Websites, sports data, and useful digital tools.</p><div><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
     </main>
   );
 }

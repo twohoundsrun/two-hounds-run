@@ -7,7 +7,7 @@ Single-page marketing site for the Two Blue Hounds studio. Not a normal Next.js 
 - `npm run install:ci` — the only supported install. Requires Linux `flock`, GNU `timeout`, `curl`, `sha256sum`. Runs a bounded `npm ci` with an integrity preflight on the pinned vinext tarball. Plain `npm install` will not set up the validated environment.
 - `npm run dev` — Vite dev server (vinext + Cloudflare bindings).
 - `npm run build` — `scripts/build-verified.sh`: runs a `timeout`-bounded `vinext build` (default 3m, `SITES_BUILD_TIMEOUT`), then validates the artifact. Result: `dist/server/index.js` + `dist/.openai/hosting.json`.
-- `npm test` — full `npm run build` + `node --test tests/rendered-html.test.mjs`. Slow; the test imports `dist/server/index.js` and asserts the `/` HTML includes a `codex-preview: development` meta tag. That meta comes from `app/layout.tsx` (`metadata.other`) — removing it breaks the test.
+- `npm test` — full `npm run build` + `node --test tests/rendered-html.test.mjs`. Slow; the test imports `dist/server/index.js` and checks homepage HTML. Do not add a `codex-preview` meta tag.
 - `npm run lint` — eslint only, ignores `dist`/`.next`. `build/` is excluded by the eslint-config-next defaults, so `build/sites-vite-plugin.ts` is never linted.
 - `npm run db:generate` — `drizzle-kit generate` (writes to `drizzle/`, which the build plugin packages into `dist/.openai/drizzle`).
 

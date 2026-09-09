@@ -29,7 +29,7 @@ export default function HoundFixProduct() {
   return (
     <main className="product-page">
       <header className="case-header">
-        <Link className="brand" href="/" aria-label="Two Hounds Run home"><img className="brand-logo" src="/images/logo-white.png" alt="Two Hounds Run" width={1774} height={887} /></Link>
+        <Link className="brand" href="/" aria-label="Two Hounds Run home"><img className="brand-mark" src="/images/two-hounds-mark.png" alt="Two Hounds Run" width={512} height={512} /></Link>
         <Link className="case-back" href="/#work">← Back to work</Link>
       </header>
 
@@ -74,7 +74,7 @@ export default function HoundFixProduct() {
         <p className="kicker">Windows release · v1.1</p><h2>HoundFix is built. The public release is next.</h2><p>We are finishing the Two Hounds Run branding, support details, and download experience. Request early access to the current Windows edition.</p><a className="button button-light" href="mailto:collindk94@gmail.com?subject=HoundFix%20early%20access">Request HoundFix <span aria-hidden="true">↗</span></a><small>Use system tools carefully. Back up important files before repairs or cleanup.</small>
       </section>
 
-      <footer><Link className="brand brand-footer" href="/"><img className="brand-logo" src="/images/logo-white.png" alt="Two Hounds Run" width={1774} height={887} /></Link><p>Practical tools. Built for the long run.</p><div><Link href="/#services">Services</Link><Link href="/#work">Work</Link><Link href="/#contact">Contact</Link></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
+      <footer><Link className="brand brand-footer" href="/"><img className="brand-lockup" src="/images/two-hounds-lockup.png" alt="Two Hounds Run" width={1774} height={887} /></Link><p>Practical tools. Built for the long run.</p><div><Link href="/#services">Services</Link><Link href="/#work">Work</Link><Link href="/#contact">Contact</Link></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
     </main>
   );
 }

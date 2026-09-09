@@ -9,7 +9,6 @@ const display = Sora({ variable: "--font-display", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Two Hounds Run",
   description: "Practical tools. Built for the long run. Websites, sports-data projects, and custom digital tools made for the real world.",
-  other: { "codex-preview": "development" },
   icons: {
     icon: [{ url: "/favicon-32.png", type: "image/png", sizes: "32x32" }],
     shortcut: "/favicon-32.png",
