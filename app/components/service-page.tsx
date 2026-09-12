@@ -30,11 +30,11 @@ export default function ServicePage({ eyebrow, title, intro, audience, problems,
 
       <section className="service-fit">
         <div><p className="kicker">Who it is for</p><h2>{audience}</h2></div>
-        <div><p className="kicker">Problems we can solve</p><ul>{problems.map((problem) => <li key={problem}>{problem}</li>)}</ul></div>
+        <div><p className="kicker">Problems I can solve</p><ul>{problems.map((problem) => <li key={problem}>{problem}</li>)}</ul></div>
       </section>
 
       <section className="service-deliverables">
-        <div className="product-section-heading"><p className="kicker">What we can build</p><h2>A right-sized solution with a clear job to do.</h2></div>
+        <div className="product-section-heading"><p className="kicker">What I can build</p><h2>A right-sized solution with a clear job to do.</h2></div>
         <div className="deliverable-grid">{deliverables.map((item, index) => <article key={item.title}><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div>
       </section>
 
@@ -45,7 +45,7 @@ export default function ServicePage({ eyebrow, title, intro, audience, problems,
 
       <section className="service-process">
         <div><p className="kicker">How it works</p><h2>Straightforward from idea to launch.</h2></div>
-        <ol><li><span>01</span><strong>Understand</strong><p>We identify the real problem, audience, and useful outcome.</p></li><li><span>02</span><strong>Scope</strong><p>You get a focused plan without unnecessary features.</p></li><li><span>03</span><strong>Build</strong><p>You see working progress and help shape the result.</p></li><li><span>04</span><strong>Launch</strong><p>We put it to work and make the handoff clear.</p></li></ol>
+        <ol><li><span>01</span><strong>Understand</strong><p>I identify the real problem, audience, and useful outcome.</p></li><li><span>02</span><strong>Scope</strong><p>You get a focused plan without unnecessary features.</p></li><li><span>03</span><strong>Build</strong><p>You see working progress and help shape the result.</p></li><li><span>04</span><strong>Launch</strong><p>I put it to work and make the handoff clear.</p></li></ol>
       </section>
 
       <section className="service-faq">
@@ -54,7 +54,7 @@ export default function ServicePage({ eyebrow, title, intro, audience, problems,
       </section>
 
       <section className="product-access">
-        <p className="kicker">Start a conversation</p><h2>Tell me what is not working.</h2><p>No technical plan required. We will figure out whether there is a practical, right-sized way to solve it.</p><a className="button button-light" href={`mailto:collindk94@gmail.com?subject=${encodeURIComponent(subject)}`}>Tell me about your project <span aria-hidden="true">↗</span></a>
+        <p className="kicker">Start a conversation</p><h2>Tell me what is not working.</h2><p>No technical plan required. I will help determine whether there is a practical, right-sized way to solve it.</p><a className="button button-light" href={`mailto:collindk94@gmail.com?subject=${encodeURIComponent(subject)}`}>Tell me about your project <span aria-hidden="true">↗</span></a>
       </section>
 
       <footer><Link className="brand brand-footer" href="/"><img className="brand-lockup" src="/images/two-hounds-lockup.png" alt="Two Hounds Run" width={1774} height={887} /></Link><p>Practical tools. Built for the long run.</p><div><Link href="/#services">Services</Link><Link href="/#work">Work</Link><Link href="/#contact">Contact</Link></div><small>© {new Date().getFullYear()} Two Hounds Run</small></footer>
