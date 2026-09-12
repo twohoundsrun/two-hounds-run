@@ -27,8 +27,8 @@ export default function SiteHeader() {
         <img className="brand-mark" src="/images/two-hounds-mark.png" alt="Two Hounds Run" width={512} height={512} />
       </a>
       <nav className="site-nav" aria-label="Main navigation">
-        <a href="#services">Services</a>
         <a href="#work">Work</a>
+        <a href="#services">Services</a>
         <a href="#about">About</a>
       </nav>
       <a className="button button-small header-contact" href="#contact">Start a project <span aria-hidden="true">↗</span></a>
@@ -44,8 +44,8 @@ export default function SiteHeader() {
       </button>
       <div id={menuId} className="mobile-menu" hidden={!open}>
         <nav aria-label="Mobile navigation">
-          <a href="#services" onClick={close}>Services</a>
           <a href="#work" onClick={close}>Work</a>
+          <a href="#services" onClick={close}>Services</a>
           <a href="#about" onClick={close}>About</a>
           <a className="mobile-menu-contact" href={CONTACT_HREF} onClick={close}>Contact</a>
         </nav>
